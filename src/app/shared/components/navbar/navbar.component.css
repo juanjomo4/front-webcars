@@ -1,0 +1,118 @@
+/* Contenedor de nav + login */
+.navbar-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  justify-content: flex-start; /* Por defecto, pero puedes omitirlo */
+}
+
+/* Navbar cápsula de vidrio */
+.navbar {
+  display: flex;
+  padding: 0.7rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  max-width: 600px; /* Opcional: limita el ancho máximo */
+  justify-content: center; /* Centra los links dentro de la navbar */
+  margin-left: auto; /* <-- Añade esto */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00c6ff;
+}
+
+/* Caja de login independiente */
+.login-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: white;
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: auto; /* Empuja la caja a la derecha */
+}
+
+.login-box:hover {
+  background: #00c6ff;
+  color: #1e1e2f;
+}
+
+.login-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.login-box input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-box button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+  background: #00c6ff;
+  color: #1e1e2f;
+}
+
+/* -------- Responsividad -------- */
+@media (max-width: 700px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .login-box {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

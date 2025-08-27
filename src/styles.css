@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background: linear-gradient(120deg, #6b6ba0, #787a7e); /* fondo de prueba */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
