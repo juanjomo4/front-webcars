@@ -1,6 +1,6 @@
 /* Contenedor de nav + login */
 .navbar-container {
-  margin-top: 5px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 1rem;
